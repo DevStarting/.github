@@ -1,0 +1,37 @@
+name: 📝 General Task
+description: General task or chore to be completed.
+title: "[TASK] "
+labels: ["type: chore"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please describe the task to be done.
+
+  - type: textarea
+    id: task-description
+    attributes:
+      label: Task Description
+      description: Provide a clear description of the task.
+      placeholder: e.g., "Clean up the repo by removing unused code."
+    validations:
+      required: true
+
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impact
+      description: What will be the impact of completing this task?
+      placeholder: e.g., "Improved code maintainability."
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: task-checklist
+    attributes:
+      label: Checklist
+      options:
+        - label: Task is small and quick
+        - label: Task requires testing after completion

@@ -1,0 +1,58 @@
+name: 🐞 Bug Report
+description: Report a bug or unexpected behavior.
+title: "[BUG] "
+labels: ["type: bug"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please help us by filling out the following template to report the bug.
+
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: OS, browser, version, etc.
+      placeholder: "e.g., Windows 11, Chrome 89, Java 17..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: Description of the Problem
+      description: What is not working as expected?
+      placeholder: Describe the bug here...
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      description: Describe the steps to reproduce the issue.
+      placeholder: |
+        1. Go to...
+        2. Click on...
+        3. See the error...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: What should happen instead?
+      placeholder: Describe what should happen here...
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checklist
+      options:
+        - label: I have searched for existing issues
+        - label: I have included all relevant details
